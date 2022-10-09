@@ -1,0 +1,31 @@
+ return (
+    <div>
+      <div className="SearchBar-wrapper">
+        <FontAwesomeIcon icon={faMagnifyingGlass}/>
+        <input 
+          type="text" 
+          placeholder="Search" 
+          value={searchTerm}
+          onChange={(e:any) => handleFilter}
+        />
+        <FontAwesomeIcon icon={faTimes} onClick={clearInput}/>
+      </div>
+      
+       {searchTerm !== "" && users.filter((data:Users => {
+        if(searchTerm=="") {
+          return val
+        }
+        else if(val.first_name.toLowerCase().includes(searchTerm.toLowerCase())) {
+          return val
+        }
+      })).map((val, key) => {
+        return (
+          <div className='user' key={key}>
+            <Link href={'/' + val.first_name}>{val.first_name}</Link>
+          </div>
+        );
+      })} 
+    </div>
+  )
+}
+  export default SearchBar;

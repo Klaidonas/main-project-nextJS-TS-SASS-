@@ -1,0 +1,14 @@
+[
+  {"img":"images/logo.png",
+  "title":"example1",
+  "text":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. 1"},
+  {"img":"/utils/example.png",
+  "title":"example2",
+  "text":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. 2"},
+  {"img":"../assets/images/logo.png",
+  "title":"example3",
+  "text":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. 3"},
+  {"img":"../assets/images/logo.png",
+  "title":"example4",
+  "text":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. 4"}
+]

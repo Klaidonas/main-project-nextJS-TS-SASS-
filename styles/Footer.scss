@@ -1,0 +1,33 @@
+@import "../Variables/Variables.scss";
+
+footer {
+
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: $PRIMARY_COLOR;
+  align-items: center;
+  clear: both;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  .logo {
+    color:red;
+  }
+
+  .pagesList {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .pagesList li {
+    margin-bottom:20px;
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color:$FONT_COLOR;
+  }
+}

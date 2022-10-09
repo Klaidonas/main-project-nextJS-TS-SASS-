@@ -1,0 +1,34 @@
+@import "../Variables/Variables.scss";
+
+
+
+h1 {
+  padding:0;
+  margin:0;
+}
+.layoutWrap {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+  width: 90%;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  // width: ($DESKTOPS_SIZE - $LAYOUT_PADDING) * 2;
+  // @media (max-width: $DESKTOPS_SIZE) {
+  //   width: ($LAPTOPS_SIZE - $LAYOUT_PADDING) * 2;
+  // }
+  // @media (max-width: $LAPTOPS_SIZE) {
+  //   width: ($TABLETS_SIZE - $LAYOUT_PADDING) * 2;
+  // }
+  // @media (max-width: $TABLETS_SIZE) {
+  //   width: auto;
+  // }
+}
+
+.ui {
+  width:100%;
+}
+
+  

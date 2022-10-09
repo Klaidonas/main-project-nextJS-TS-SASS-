@@ -1,0 +1,45 @@
+@import "../Variables/Variables.scss";
+
+.landing {
+  .box {
+    width: 200px;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: $DEFAULT_BORDER;
+    border-radius: $DEFAULT_BORDER_RADIUS;
+    @include defaultBoxShadow(#888888);
+    background-color: #fff;
+    padding:0 10px;
+    z-index: -1;
+
+    h1 {
+      margin-bottom: 50px;
+    }
+
+    img {
+      border-radius: $DEFAULT_BORDER_RADIUS;
+      border: $DEFAULT_BORDER;
+      border-top: 0;
+    }
+
+  }
+  
+  .content {
+    @include defaultRow();
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: $LAPTOPS_SIZE) {
+    .box {
+      margin: 25px 0;
+    }
+}
+@media (max-width: $TABLETS_SIZE) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+}

@@ -1,0 +1,48 @@
+//screen sizes
+$DESKTOPS_SIZE: 1280px;
+$DESKTOPS_SIZE2: 1360px;
+$LAPTOPS_SIZE: 1024px;
+$LAPTOPS_SIZE2: 1080px;
+$TABLETS_SIZE: 768px;
+$MOBILE_SIZE: 480px;
+$MOBILE_SIZE2: 445px;
+$SUPER_SMALL_SIZE: 320px;
+
+//default font sizes
+$DEFAULT_FONT_SIZE: 20px;  
+$DEFAULT_FRAME_SIZE: 90px;
+$NEW_FONT: 69px;
+
+//default fonts
+$DEFAULT_FONT: Arial, Helvetica, sans-serif;
+
+//colors
+$PRIMARY_COLOR: rgb(239, 239, 239);
+$SECONDARY_COLOR: #e2d51d;
+$TERTIARY_COLOR: rgba(128, 128, 128, 0.453);
+$FONT_COLOR: rgb(28, 28, 28);
+
+//default border
+$DEFAULT_BORDER: 1px solid #000;
+$DEFAULT_BORDER_RADIUS: 5px;
+$DEFAULT_BORDER_RADIUS2: 35px;
+//default box-shadow
+@mixin defaultBoxShadow($color) {
+  box-shadow: 5px 10px 8px $color;
+}
+//$DEFAULT_BOX_SHADOW:  #888888;
+
+//default row
+@mixin defaultRow {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width:100%;
+}
+
+// gridlist
+$DEFAULT_CELL_WIDTH: 5px;
+$DEFAULT_CELL_HEIGHT: 5px;
+$FRAME_CELL_HEIGHT: 3px;
+
+$LAYOUT_PADDING: 25px;

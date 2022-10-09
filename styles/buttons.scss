@@ -1,0 +1,29 @@
+@import "../Variables/Variables.scss";
+
+.defaultBtn {
+  align-items: center;
+  background-color: $SECONDARY_COLOR;
+  border: none;
+  border-radius: 6px;
+  color: $PRIMARY_COLOR;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.1em;
+  height: 35px;
+  justify-content: center;
+  margin: 50px 0 25px 0;
+  width: 100%;
+}
+.loaderBtn {
+  align-items: center;
+  background-color: $SECONDARY_COLOR;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.1em;
+  height: 35px;
+  justify-content: center;
+  margin: 50px 0 25px 0;
+  width: 100%;
+}
