@@ -80,8 +80,14 @@ header {
     .mob-header {
       display: flex;
       align-items: center;
+      
       .pagesList {
         display:none;
+        padding:0;
+
+        li {
+          margin:0;
+        }
       }
     }
   }

@@ -1,12 +1,13 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
+import { getStorage, uploadBytes } from "firebase/storage";
 import {
   getAuth, createUserWithEmailAndPassword, 
   onAuthStateChanged, signOut, 
   signInWithEmailAndPassword
 } from "firebase/auth";
 import { useState, useEffect } from "react";
+import { User } from "../interfaces";
 
 
 const firebaseConfig = {
@@ -44,7 +45,12 @@ export function useAuth() {
   const [currentUser, setCurrentUser] = useState();
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, user => setCurrentUser(user as any));
+    const unsub = onAuthStateChanged(auth, user => {
+      setCurrentUser(user as any)
+      console.log("useEffect user!!!: " + user)
+    });
+    
+    
     return unsub;
   }, [])
 

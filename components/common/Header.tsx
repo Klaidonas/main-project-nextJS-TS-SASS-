@@ -7,7 +7,7 @@ import Auth from '../auth';
 
 const Header = () => {
 
-  const [authenticationModal, setAuthenticationModal] = useState(false)
+  const [authenticationModal, setAuthenticationModal] = useState<boolean>(false)
   const [mobNav, setMobNav] = useState<string>("none");
   const [mobNavMarginWithAuth, setmobNavMarginWithAuth] = useState<number>(0);
   const currentUser:any = useAuth();
@@ -15,15 +15,14 @@ const Header = () => {
   const handleModal = () => {
      setAuthenticationModal(!authenticationModal);
      console.log("authenticationModal: " + authenticationModal);
-
      //handleNavAndAuth
      if(!authenticationModal) setmobNavMarginWithAuth(330);
      else if(authenticationModal) setmobNavMarginWithAuth(0);
      console.log("mobnav: " + mobNavMarginWithAuth);
   }
 
-  console.log(currentUser);
-  console.log(authenticationModal);
+  {currentUser?.email ? console.log("curren tUser: "+ currentUser.email):console.log("User probably logged off ("+ currentUser + ")")}
+  //console.log(authenticationModal);
   
   const setModalClose = () => {
     setAuthenticationModal(false);
@@ -56,6 +55,7 @@ const Header = () => {
           </ul>
         </div>
       </nav>
+
       <nav className="mob-header">
         <div className="logo">
           <Image src={logo} alt="logo" width="90px" height="80px"/>

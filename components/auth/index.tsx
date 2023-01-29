@@ -8,6 +8,7 @@ const Auth = ({setModalClose}: any) => {
 
   const [currentComponent, setCurrentComponent] = useState("LogIn");
   const currentUser:any = useAuth();
+  
 
   const changeComponent = (componentName: string) => {               
     setCurrentComponent(componentName)
@@ -23,18 +24,17 @@ const Auth = ({setModalClose}: any) => {
       alert("Error!");
     }
   }
-console.log("currentUser: " + currentUser);
+//console.log("currentUser: " + currentUser);
 
   return (
-<div className="Authentication">
-  {currentUser && <div>Currently logged in as: <br />{currentUser?.email}</div>}
-  {!currentUser && currentComponent === "LogIn" && <LogIn childrenSees={changeComponent} setModalClose={setModalClose} />}
-  {!currentUser && currentComponent === "SignUp" && <SignUp changeComponent={changeComponent} setModalClose={setModalClose} />}
-  {!currentUser && currentComponent === "ForgotPassword" && <ForgotPassword changeComponent={changeComponent} />}
-  {currentUser && <div><span><a href="profile">Go to your profile</a><br /></span></div>}
-  {currentUser && <button onClick={handleLogOut}>LogOut</button>}
-  
-</div>
+    <div className="Authentication">
+      {currentUser && <div>Currently logged in as: <br />{currentUser?.email}</div>}
+      {!currentUser && currentComponent === "LogIn" && <LogIn childrenSees={changeComponent} setModalClose={setModalClose} />}
+      {!currentUser && currentComponent === "SignUp" && <SignUp changeComponent={changeComponent} setModalClose={setModalClose} />}
+      {!currentUser && currentComponent === "ForgotPassword" && <ForgotPassword changeComponent={changeComponent} setModalClose={setModalClose} />}
+      {currentUser && <div><span><a href="profile">Go to your profile</a><br /></span></div>}
+      {currentUser && <button onClick={handleLogOut}>LogOut</button>}
+    </div>
   );
 };
 

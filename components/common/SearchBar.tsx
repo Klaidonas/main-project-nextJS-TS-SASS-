@@ -15,20 +15,19 @@ const SearchBar = () => {
   const handleFilter = (event:Target) => {
     const currentInput = event.target.value;
     setSearchTerm(currentInput);
-
   };
+
 
   const clearInput = () => {
     setSearchTerm("");
     console.log("clearinput");
 
   };
-
-
   
     
     useEffect(() => {
       initialFetch()
+      console.log("initialFetch just Ran")
     }, [])
 
     const initialFetch = async() => {

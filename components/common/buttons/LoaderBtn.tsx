@@ -3,7 +3,7 @@ import ClipLoader from '../../../node_modules/react-spinners/ClipLoader';
 
 
 
-const loaderBtn = () => {
+const LoaderBtn = () => {
   
   const [disabledButton, setDisabledButton] = useState<boolean>(false)
   console.log("disabledBtn: ", disabledButton);
@@ -27,4 +27,4 @@ const loaderBtn = () => {
   )
 };
 
-export default loaderBtn;
+export default LoaderBtn;

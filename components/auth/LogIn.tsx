@@ -29,7 +29,6 @@ const LogIn = ({childrenSees, setModalClose}:Props) => {
     //setLoading(false);
   }
 
-  console.log("component: login");
   
   return (
 <div className="login">
