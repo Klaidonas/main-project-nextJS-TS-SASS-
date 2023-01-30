@@ -46,12 +46,12 @@ const Landing = () => {
 
   return (
     <div className="landing">
-      <Image src={LandingImg} />
+      <Image src={LandingImg} alt ="nice" />
       <div className="content">
         {boxes && boxes.map((data:BoxData) => {
             return(
               <div className="box" key={data.id}>
-                <img src={data.imageUrl}  width={220} alt="cool example" />
+                <Image src={data.imageUrl}  width={220} height={200} alt="cool example" />
                 <h1>{data.title}</h1>
                 <p>{data.text}</p>
               </div>
